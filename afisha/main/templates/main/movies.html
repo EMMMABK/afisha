@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Movies
+{% endblock %}
+
+{% block content %}
+     <form method="post">
+          {% csrf_token %}
+          {{ form.title }}
+          {{ form.description }}
+          <button type="submit" class="btn btn-success">Add</button>
+          <span>{{ error }}</span>
+     </form>
+{% endblock %}
+
+
